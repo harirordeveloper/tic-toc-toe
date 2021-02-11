@@ -9,10 +9,10 @@
   </ul>
   <div class="card-body">
     <%= form_tag("/games", :method => "post") do %>
-		  <h5 class="card-title">Select your opponent</h5>
-		   <%= select_tag "opponent", options_from_collection_for_select(@opponents, "id", "name"), class: "form-select form-select-lg mb-3 input-lg" %>
-		   <%= submit_tag("Play", class: "btn btn-primary") %>
-		<% end %>
+      <h5 class="card-title">Select your opponent</h5>
+       <%= select_tag "opponent", options_from_collection_for_select(@opponents, "id", "name"), class: "form-select form-select-lg mb-3 input-lg" %>
+       <%= submit_tag("Play", class: "btn btn-primary") %>
+    <% end %>
   </div>
 
   <div class="card-footer text-muted">
