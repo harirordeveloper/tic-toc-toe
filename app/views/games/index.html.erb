@@ -1,0 +1,20 @@
+<div class="card text-center">
+  <div class="card-header">
+    Played Games
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Games Own : <%= @winning_games.count %></li>
+    <li class="list-group-item">Games lost : <%= @lost_games.count %></li>
+    <li class="list-group-item">Games with no Result : <%= @no_result_games.count %></li>
+  </ul>
+  <div class="card-body">
+    <%= form_tag("/games", :method => "post") do %>
+		  <h5 class="card-title">Select your opponent</h5>
+		   <%= select_tag "opponent", options_from_collection_for_select(@opponents, "id", "name"), class: "form-select form-select-lg mb-3 input-lg" %>
+		   <%= submit_tag("Play", class: "btn btn-primary") %>
+		<% end %>
+  </div>
+
+  <div class="card-footer text-muted">
+  </div>
+</div>
