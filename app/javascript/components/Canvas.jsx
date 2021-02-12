@@ -155,6 +155,9 @@ createNewGame = (data) =>{
 
   updateGame = (data) =>{
     var gameId = null;
+    if(this.state["gameId"]==null){
+      return  false;
+    }
     axios({
         method: 'patch',
         url: "/api/v1/games/"+ this.state["gameId"],
