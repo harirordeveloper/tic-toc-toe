@@ -6,11 +6,11 @@
 
 * This has docker added so you can run this in your docker container
 
-docker-compose build
-docker-compose up
-docker-compose run web bundle exec rake db:create
-docker-compose run web bundle exec rake db:migrate
-docker-compose run web bundle exec rake db:seed
+- docker-compose build
+- docker-compose up
+- docker-compose run web bundle exec rake db:create
+- docker-compose run web bundle exec rake db:migrate
+- docker-compose run web bundle exec rake db:seed
 
 * you can quickly test this app using test users created through seed
 
