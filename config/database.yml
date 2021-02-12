@@ -1,31 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  host: db
   username: postgres
-  password: test123
-  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
-  port: <%= ENV['DATABASE_PORT'] || '5432' %>
+  password: password
+  pool: 5
 
 development:
   <<: *default
   database: tic_tac_toe_development
 
-dev:
-  <<: *default
-  database: change_my_info_dev
 
-staging:
+test:
   <<: *default
-  database: change_my_info_staging
-
-production:
-  <<: *default
-  database: change_my_info_production
-
-test: &test
-  <<: *default
-  database: change_my_info_test
-
-cucumber:
-  <<: *test
+  database: tic_tac_toe_test
